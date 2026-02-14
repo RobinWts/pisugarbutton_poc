@@ -1,10 +1,11 @@
-# PiSugar Button plugin
+# PiSugar Button plugin for InkyPi
+## **THIS IS INTENDED AS PROOF OF CONCEPT ONLY**
 
 This plugin exposes an HTTP hook that **refreshes and redisplayes the currently shown playlist item**. When the PiSugar hardware button is configured to run the provided script, pressing the button triggers a display update: the same plugin instance is regenerated and shown again (e.g. to fetch fresh data or redraw the slide).
 
 ## Requirements
 
-- **InkyPi core** must have [plugin blueprint registration](https://github.com/fatihak/InkyPi/blob/main/docs/plugin_core_interface_proposal.md) enabled (i.e. `register_plugin_blueprints(app)` and plugins implementing `get_blueprint()`). Without it, the plugin’s API route will not be registered.
+- **InkyPi core** must have plugin blueprint registration (at the time only provided by the [PluginManager](https://github.com/RobinWts/InkyPi-Plugin-PluginManager)) enabled. You have this installed first, without it, the plugin’s API route will not be registered.
 - **PiSugar** hardware (e.g. PiSugar 2, 3, or S) with the [PiSugar Power Manager](https://docs.pisugar.com/docs/product-wiki/battery/pisugar-power-manager) installed so you can assign a script to the button.
 
 ## What it does
@@ -27,7 +28,7 @@ sudo systemctl restart inkypi.service
 On the Raspberry Pi:
 
 ```bash
-chmod +x /home/pi/InkyPi/src/plugins/pisugarbutton/scripts/refresh-display.sh
+sudo chmod +x /home/pi/InkyPi/src/plugins/pisugarbutton/scripts/refresh-display.sh
 ```
 
 Use the path that matches your InkyPi install (e.g. `/home/pi/InkyPi` or your project root).
