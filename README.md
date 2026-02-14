@@ -75,7 +75,3 @@ A successful response is JSON like:
 ```
 
 If the current display is not from a playlist, you’ll get `400` and a message that refresh only works for playlist items.
-
-## Icon
-
-Add an `icon.png` in the `pisugarbutton` plugin folder if you want a custom icon in the InkyPi plugin list; otherwise the UI may show a default or placeholder.
