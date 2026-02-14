@@ -2,5 +2,5 @@
     "display_name": "PiSugar Button",
     "id": "pisugarbutton",
     "class": "PiSugarButton",
-    "repository": ""
+    "repository": "https://github.com/RobinWts/pisugarbutton_poc"
 }
